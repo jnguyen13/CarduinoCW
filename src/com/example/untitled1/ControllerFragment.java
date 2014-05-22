@@ -70,10 +70,10 @@ public class ControllerFragment extends Fragment {
                 switch ( event.getAction() ) {
                     case MotionEvent.ACTION_DOWN:
                         UDPSender.stop = false;  //quit stopping
-                        UDPSender.reverse = true; //go
+                        UDPSender.reverse = true; //reverse
                         break;
                     case MotionEvent.ACTION_UP:
-                        UDPSender.reverse = false; //stop going
+                        UDPSender.reverse = false; //stop reverse
                         UDPSender.stop = true; // stop
                         break;
                 }
@@ -87,12 +87,12 @@ public class ControllerFragment extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch ( event.getAction() ) {
                     case MotionEvent.ACTION_DOWN:
-                        UDPSender.realign = false;  //quit stopping
-                        UDPSender.left = true; //go
+                        UDPSender.realign = false;  //quit realigning
+                        UDPSender.left = true; //go left
                         break;
                     case MotionEvent.ACTION_UP:
-                        UDPSender.left = false; //stop going
-                        UDPSender.realign = true; // stop
+                        UDPSender.left = false; //stop going left
+                        UDPSender.realign = true; // start realigning
                         break;
                 }
                 return true;
@@ -105,12 +105,12 @@ public class ControllerFragment extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch ( event.getAction() ) {
                     case MotionEvent.ACTION_DOWN:
-                        UDPSender.realign = false;  //quit stopping
-                        UDPSender.right = true; //go
+                        UDPSender.realign = false;  //quit realigning
+                        UDPSender.right = true; //go right
                         break;
                     case MotionEvent.ACTION_UP:
-                        UDPSender.right = false; //stop going
-                        UDPSender.realign = true; // stop
+                        UDPSender.right = false; //stop going right
+                        UDPSender.realign = true; // start realigning
                         break;
                 }
                 return true;

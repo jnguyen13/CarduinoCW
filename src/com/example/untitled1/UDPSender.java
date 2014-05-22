@@ -56,7 +56,7 @@ public class UDPSender {
             protected Void doInBackground(Void... params) {
                 running = true;
 
-                while(running)
+                while(running) //Depending on button, send packet
                 {
                     if(forward)
                         logAndSendPacket("forward",ipAddress,port);
@@ -78,7 +78,7 @@ public class UDPSender {
         }.execute();
     }
 
-    public static void logAndSendPacket(String packetContents, String ipAddress, int port) {
+    public static void logAndSendPacket(String packetContents, String ipAddress, int port) { //Send those packets to Arduino
 
         try {
             //Communication Socket
