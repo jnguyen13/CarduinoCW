@@ -12,6 +12,7 @@ import android.widget.Button;
 
 /**
  * Created by student on 4/3/14.
+ * Used to control what the buttons do.
  */
 public class ControllerFragment extends Fragment {
 
